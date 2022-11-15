@@ -8,7 +8,7 @@ def create_TodoItem():
   return item
 
 def test_create_TodoItem():
-  item = TodoItem(taskDescription)
+  item = create_TodoItem()
 
   assert(item.description == taskDescription)
   assert(item.complete == False)
