@@ -52,3 +52,9 @@ def test_load_todo(taskDescription = "Mow lawn"):
   loadedItem = TodoItem.load(item.save())
 
   assert(item == loadedItem)
+
+  item.markComplete()
+
+  loadedItem = TodoItem.load(item.save())
+
+  assert(item == loadedItem)
