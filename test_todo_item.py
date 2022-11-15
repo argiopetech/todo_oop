@@ -7,7 +7,7 @@ def create_TodoItem(taskDescription):
 
 
 def test_create_TodoItem(taskDescription = "Mow lawn"):
-  item = create_TodoItem(taskDescription)
+  item = TodoItem(taskDescription)
 
   assert(item.description == taskDescription)
   assert(item.complete == False)
@@ -15,7 +15,7 @@ def test_create_TodoItem(taskDescription = "Mow lawn"):
 
 
 def test_save_TodoItem(taskDescription = "Mow lawn"):
-  item = create_TodoItem(taskDescription)
+  item = TodoItem(taskDescription)
 
   result = item.save()
   assert(result == f"False|{taskDescription}")
@@ -30,7 +30,7 @@ def test_other_tasks():
 
 
 def test_task_completion(taskDescription = "Mow lawn"):
-  item = create_TodoItem(taskDescription)
+  item = TodoItem(taskDescription)
 
   assert(item.complete == False)
 
@@ -41,7 +41,7 @@ def test_task_completion(taskDescription = "Mow lawn"):
 
 def test_empty_todo():
   try:
-    create_TodoItem("")
+    TodoItem("")
   except ValueError as e:
     return
 
