@@ -1,2 +1,2 @@
 class TodoItem:
-    pass
+    def __init__(self, description): pass
