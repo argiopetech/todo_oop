@@ -1,11 +1,5 @@
 from todo_item import *
 
-def create_TodoItem(taskDescription):
-  item = TodoItem(taskDescription)
-
-  return item
-
-
 def test_create_TodoItem(taskDescription = "Mow lawn"):
   item = TodoItem(taskDescription)
 
