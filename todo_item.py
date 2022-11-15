@@ -19,7 +19,8 @@ class TodoItem:
         self.complete = True
 
     def load(toLoad):
-        return TodoItem("Mow lawn")
+        descr = toLoad.split('|', 1)[1]
+        return TodoItem(descr)
 
     def __eq__(self, other):
         return self.description == other.description and self.complete == other.complete
