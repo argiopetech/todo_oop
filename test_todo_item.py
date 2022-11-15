@@ -14,6 +14,10 @@ def test_save_TodoItem(taskDescription = "Mow lawn"):
   result = item.save()
   assert(result == f"False|{taskDescription}")
 
+  item.markComplete()
+  result = item.save()
+  assert(result == f"True|{taskDescription}")
+
 
 def test_other_tasks():
   taskList = ["Task 1", "Task 2", "Task 3"]
