@@ -7,3 +7,4 @@ def test_create_TodoItem():
 
   assert(item.description == taskDescription)
   assert(item.complete == False)
+  assert(item.creationDate)
