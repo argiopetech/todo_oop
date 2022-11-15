@@ -45,4 +45,5 @@ def test_empty_todo():
 
   assert(False)
 
-  
+def test_load_todo():
+  pass
