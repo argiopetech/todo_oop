@@ -27,3 +27,13 @@ def test_other_tasks():
   for task in taskList:
     test_create_TodoItem(task)
     test_save_TodoItem(task)
+
+
+def test_task_completion(taskDescription = "Mow lawn"):
+  item = create_TodoItem(taskDescription)
+
+  assert(item.complete == False)
+
+  item.markComplete()
+
+  assert(item.complete == True)
