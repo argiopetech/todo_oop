@@ -37,3 +37,14 @@ def test_task_completion(taskDescription = "Mow lawn"):
   item.markComplete()
 
   assert(item.complete == True)
+
+
+def test_empty_todo():
+  try:
+    create_TodoItem("")
+  except ValueError as e:
+    return True
+
+  assert(False)
+
+  
