@@ -61,3 +61,4 @@ def test_load_todo():
     assert(item == loadedItem)
 
   doTest("Mow lawn")
+  doTest("Mow|Lawn")
