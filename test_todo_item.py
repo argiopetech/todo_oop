@@ -14,5 +14,7 @@ def test_create_TodoItem():
   assert(item.complete == False)
   assert(item.creationDate)
 
-def test_save_TodoItem(): pass
+def test_save_TodoItem():
+  item = create_TodoItem()
+
 #  assert(False)
