@@ -1,4 +1,7 @@
 from todo_item import *
 
 def test_create_TodoItem():
-  item = TodoItem("Mow lawn")
+  taskDescription = "Mow lawn"
+
+  item = TodoItem(taskDescription)
+  assert(item.description == taskDescription)
