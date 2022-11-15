@@ -12,13 +12,12 @@ def test_create_TodoItem(taskDescription = "Mow lawn"):
   assert(item.complete == False)
   assert(item.creationDate)
 
+
 def test_save_TodoItem(taskDescription = "Mow lawn"):
   item = create_TodoItem(taskDescription)
 
   result = item.save()
   assert(result == f"False|{taskDescription}")
-
-#  assert(False)
 
 
 def test_other_tasks():
