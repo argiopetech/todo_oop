@@ -19,8 +19,10 @@ class TodoItem:
         self.complete = True
 
     def load(toLoad):
-        descr = toLoad.split('|', 1)[1]
-        return TodoItem(descr)
+        [completion, descr] = toLoad.split('|', 1)
+        item = TodoItem(descr)
+
+        return item
 
     def __eq__(self, other):
         return self.description == other.description and self.complete == other.complete
