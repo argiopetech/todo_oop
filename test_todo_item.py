@@ -47,14 +47,17 @@ def test_empty_todo():
 
 
 def test_load_todo(taskDescription = "Mow lawn"):
-  item = TodoItem(taskDescription)
+  def doTest():
+    item = TodoItem(taskDescription)
 
-  loadedItem = TodoItem.load(item.save())
+    loadedItem = TodoItem.load(item.save())
 
-  assert(item == loadedItem)
+    assert(item == loadedItem)
 
-  item.markComplete()
+    item.markComplete()
 
-  loadedItem = TodoItem.load(item.save())
+    loadedItem = TodoItem.load(item.save())
 
-  assert(item == loadedItem)
+    assert(item == loadedItem)
+
+  doTest()
