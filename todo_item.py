@@ -22,4 +22,4 @@ class TodoItem:
         return TodoItem("Mow lawn")
 
     def __eq__(self, other):
-        return True
+        return self.complete == other.complete
