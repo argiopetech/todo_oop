@@ -17,4 +17,7 @@ def test_create_TodoItem():
 def test_save_TodoItem():
   item = create_TodoItem()
 
+  result = item.save()
+  assert(result == f"False|{taskDescription}")
+
 #  assert(False)
