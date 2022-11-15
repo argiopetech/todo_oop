@@ -6,3 +6,7 @@ class TodoItem:
         self.complete = False
 
         self.creationDate = datetime.now()
+
+
+    def save(self):
+        return f"False|{self.description}"
