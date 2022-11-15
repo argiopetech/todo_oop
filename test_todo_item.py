@@ -1,4 +1,4 @@
 import todo_item
 
-def test_true():
-  pass
+def test_create_TodoItem():
+  item = TodoItem("Mow lawn")
