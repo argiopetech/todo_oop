@@ -2,8 +2,12 @@ from todo_item import *
 
 taskDescription = "Mow lawn"
 
-def test_create_TodoItem():
+def create_TodoItem():
+  item = TodoItem(taskDescription)
 
+  return item
+
+def test_create_TodoItem():
   item = TodoItem(taskDescription)
 
   assert(item.description == taskDescription)
