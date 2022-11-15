@@ -45,5 +45,10 @@ def test_empty_todo():
 
   assert(False)
 
-def test_load_todo():
-  pass
+
+def test_load_todo(taskDescription = "Mow lawn"):
+  item = TodoItem(taskDescription)
+
+  loadedItem = item.load(item.save())
+
+  assert(item == loadedItem)
