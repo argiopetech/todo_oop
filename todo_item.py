@@ -11,7 +11,7 @@ class TodoItem:
 
 
     def save(self):
-        return f"False|{self.description}"
+        return f"{self.complete}|{self.description}"
 
 
     def markComplete(self):
