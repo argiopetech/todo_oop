@@ -47,7 +47,7 @@ def test_empty_todo():
 
 
 def test_load_todo():
-  def doTest(taskDescription = "Mow lawn"):
+  def doTest(taskDescription):
     item = TodoItem(taskDescription)
 
     loadedItem = TodoItem.load(item.save())
@@ -60,4 +60,4 @@ def test_load_todo():
 
     assert(item == loadedItem)
 
-  doTest()
+  doTest("Mow lawn")
