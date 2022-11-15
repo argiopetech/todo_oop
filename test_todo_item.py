@@ -40,7 +40,7 @@ def test_task_completion(taskDescription = "Mow lawn"):
 def test_empty_todo():
   try:
     TodoItem("")
-  except ValueError as e:
+  except ValueError:
     return
 
   assert(False)

@@ -2,7 +2,8 @@ from datetime import datetime
 
 class TodoItem:
     def __init__(self, description):
-        if description == "": raise ValueError("Empty description")
+        if description == "": 
+            raise ValueError("Empty description")
 
         self.description = description
         self.complete = False
