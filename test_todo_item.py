@@ -19,3 +19,11 @@ def test_save_TodoItem(taskDescription = "Mow lawn"):
   assert(result == f"False|{taskDescription}")
 
 #  assert(False)
+
+
+def test_other_tasks():
+  taskList = ["Task 1", "Task 2", "Task 3"]
+
+  for task in taskList:
+    test_create_TodoItem(task)
+    test_save_TodoItem(task)
