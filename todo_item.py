@@ -21,7 +21,7 @@ class TodoItem:
     def load(toLoad):
         [completion, descr] = toLoad.split('|', 1)
         item = TodoItem(descr)
-
+        item.complete = completion == "True"
         return item
 
     def __eq__(self, other):
