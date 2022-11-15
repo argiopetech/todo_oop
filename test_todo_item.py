@@ -43,7 +43,7 @@ def test_empty_todo():
   try:
     create_TodoItem("")
   except ValueError as e:
-    return True
+    return
 
   assert(False)
 
